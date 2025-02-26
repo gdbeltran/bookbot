@@ -14,3 +14,14 @@ def num_characters(text):
             count[character] = 1
     
     return count
+
+def sort_on(dictionary):
+    return list(dictionary.values())[0]
+
+def sorted_list(dictionary):
+    list = []
+    for character, count in dictionary.items():
+        character_dict = {character: count}
+        list.append(character_dict)
+    list.sort(reverse=True, key=sort_on)
+    return list
